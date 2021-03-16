@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
 
 const Cart = (props) => {
     const cart = props.cart;
@@ -30,9 +30,9 @@ const Cart = (props) => {
             <h4>tax: {tax}</h4>
             <h4>total price: {(total + shipping + tax).toFixed(2)}</h4>
             <br/>
-            <Link to = "/review">
-            <button className = "button-cart">review order</button>
-            </Link>
+            {
+                props.children
+            }
         </div>
     );
 };
